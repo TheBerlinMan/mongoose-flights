@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose, { mongo } from "mongoose"
 
 const Schema = mongoose.Schema
 
@@ -29,6 +29,6 @@ const flightSchema = new Schema({
 
 const Flight = mongoose.model('Flight', flightSchema)
 
-export{
+export {
   Flight
 }
