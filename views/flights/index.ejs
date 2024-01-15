@@ -11,7 +11,7 @@
         <th>Airport</th>
         <th>Flight #</th>
         <th>Departs</th>
-        <!-- <th>Now Showing</th> -->
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -21,9 +21,10 @@
           <td><%= flight.airport %></td>
           <td><%= flight.flightNo %></td>
           <td><%= flight.departs %></td>
-          <!-- <td><%# flight.mpaaRating %></td> -->
-          <!-- <td><%# flight.cast.join(', ') %></td>
-          <td><%# flight.nowShowing ? 'Yes' : 'Nope' %></td> -->
+          <td> 
+            <button><a href="/flights/<%= flight._id %>" style="text-decoration: none;">View</a></button>
+            <button><a href="" style="text-decoration: none;">Delete</a></button>
+          </td>
         </tr>
       <% }) %>
     </tbody>
