@@ -10,15 +10,19 @@ let currentYear = function(){
 const flightSchema = new Schema({
   airline: {
     type: String,
-    default: 'n/a'
+    default: 'n/a',
+    enum: ['American', 'Southwest', 'United']
   },
   airport: {
     type: String,
-    default: 'DEN'    
+    default: 'DEN',
+    enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']    
   }, 
   flightNo: {
     type: Number,
-    default: 'n/a'
+    default: 'n/a',
+    min: 10,
+    max: 9999,
   }, 
   departs: {
     type: Date,

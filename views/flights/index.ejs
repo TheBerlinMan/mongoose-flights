@@ -3,32 +3,29 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Movie List</h1>
+  <h1>Flight List</h1>
   <table>
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Release Year</th>
-        <th>Rating</th>
-        <th>Cast</th>
-        <th>Now Showing</th>
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>Flight #</th>
+        <th>Departs</th>
+        <!-- <th>Now Showing</th> -->
       </tr>
     </thead>
     <tbody>
-      <%# Oh hey, this is an ejs comment! It starts with a # %>
-      <%# Write the line of EJS to iterate over movies using forEach %>
       <% flights.forEach(flight => { %>
-       
         <tr>
-          <td><%= movie.title %></td>
-          <td><%= movie.releaseYear %></td>
-          <td><%= movie.mpaaRating %></td>
-          <td><%= movie.cast.join(', ') %></td>
-          <%# finish the ternary expression to display 'Yes' or 'Nope' %> 
-          <td><%= movie.nowShowing ? 'Yes' : 'Nope' %></td>
+          <td><%= flight.airline %></td>
+          <td><%= flight.airport %></td>
+          <td><%= flight.flightNo %></td>
+          <td><%= flight.departs %></td>
+          <!-- <td><%# flight.mpaaRating %></td> -->
+          <!-- <td><%# flight.cast.join(', ') %></td>
+          <td><%# flight.nowShowing ? 'Yes' : 'Nope' %></td> -->
         </tr>
       <% }) %>
-        <%# Close the forEach using EJS here %>
     </tbody>
   </table>
 </main>
