@@ -23,7 +23,9 @@
           <td><%= flight.departs %></td>
           <td> 
             <button><a href="/flights/<%= flight._id %>" style="text-decoration: none;">View</a></button>
-            <button><a href="" style="text-decoration: none;">Delete</a></button>
+            <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
+              <button><a style="text-decoration: none;">Delete</a></button>
+            </form>
           </td>
         </tr>
       <% }) %>
