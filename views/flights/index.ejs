@@ -20,9 +20,9 @@
           <td><%= flight.airline %></td>
           <td><%= flight.airport %></td>
           <td><%= flight.flightNo %></td>
-          <td><%= flight.departs %></td>
+          <td><%= flight.departs.toLocaleDateString() %></td>
           <td> 
-            <button><a href="/flights/<%= flight._id %>" style="text-decoration: none;">View</a></button>
+            <button><a href="/flights/<%= flight._id %>" style="text-decoration: none;">Details</a></button>
             <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
               <button><a style="text-decoration: none;">Delete</a></button>
             </form>

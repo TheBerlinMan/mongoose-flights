@@ -16,6 +16,8 @@ const ticketSchema = new Schema({
     type: Number, 
     min: 0,
   },
+}, {
+  timestamps: true
 })
 
 
@@ -32,7 +34,7 @@ const flightSchema = new Schema({
   }, 
   flightNo: {
     type: Number,
-    default: 'n/a',
+    // default: 'n/a',
     min: 10,
     max: 9999,
   }, 
